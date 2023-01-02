@@ -167,7 +167,7 @@ body{
     letter-spacing: 0.1em;
 }
 
-@media screen and (max-width: 410px) {
+@media screen and (max-width: 500px) {
     .wrapper{
         font-size: 12px;
         width: 90vw;
@@ -175,9 +175,21 @@ body{
         
     }
 
-    .search-container input{
-        padding: 0.4em;
+    .search-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
+    .search-container input{
+        padding: 0.6em;
+        width: 100%;
+    }
+
+    .search-container button{
+        padding: 0.5em;
+    }
+    
 }
 
 @media screen and (max-width: 300px) {
