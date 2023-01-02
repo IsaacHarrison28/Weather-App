@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family:  sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 :root{
@@ -100,6 +100,73 @@ body{
     border-radius: 0.3em;
 }
 
+#result h2{
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-weight: 600;
+    margin: 1.25em 0;
+}
+
+.weather,
+.desc{
+    color: var(--off-white);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: clamp(0.6em, 5vw, 0.9em);
+    font-weight: 500;
+    line-height: 2em;
+}
+
+.weather{
+    margin-top: -0.7em;
+}
+
+#result img{
+    margin: 0.6em 0 0 0;
+    width: clamp(4.5em, 5vw, 6.2em);
+    filter: drop-shadow(0 1.8em 3.7em var(--shadow));
+}
+
+#result h1{
+    font-size: clamp(3em, 5vw, 4em);
+    margin: 0.3em 0 0.7em 0;
+    font-weight: 400;
+    line-height: 0;
+    color: var(--white);
+}
+
+.temp-container{
+    display: flex;
+    justify-content: center;
+}
+
+.temp-container div{
+    padding: 0.3em 1em;
+}
+
+.temp-container div:first-child{
+    border-right: 2px solid var(--transp-white-1);
+}
+
+.temp-container .title{
+    font-weight: 600;
+    color: var(--white);
+}
+
+.temp-container .temp{
+    font-weight: 300;
+    color: var(--off-white);
+}
+
+.msg{
+    margin-top: 1.8em;
+    color: var(--white);
+    font-weight: 500;
+    text-transform: capitalize;
+    letter-spacing: 0.1em;
+}
+
 @media screen and (max-width: 410px) {
     .wrapper{
         font-size: 12px;
@@ -114,9 +181,6 @@ body{
 }
 
 @media screen and (max-width: 300px) {
-    .container{
-        padding: 2em 0.8em;  
-    }
 
     .shape-1{
         height: 10em;
@@ -131,15 +195,39 @@ body{
         bottom: -2.7em;
         left: -2.5em;
     }
-    .search-container input{
-        padding: 0.1em;
-    }
+    
     .container{
-        padding: 1em 0.5em;
+        padding: 2em 2em;
     }
 
     .search-container{
-        grid-template-columns: 9fr 2fr;
-        gap: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .search-container input{
+        padding: 0.6em;
+        width: 100%;
+    }
+
+    .search-container button{
+        padding: 0.5em;
+    }
+}
+
+@media screen and (max-width: 265px) {
+    .search-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .search-container input{
+        padding: 0.6em;
+    }
+
+    .search-container button{
+        padding: 0.5em;
     }
 }
